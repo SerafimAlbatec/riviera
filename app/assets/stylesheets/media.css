@@ -1,0 +1,57 @@
+/* ================= MEDIA QUERIES ================== */
+ @media only screen and (max-width:800px) {
+    body {
+        overflow:auto !important;
+    }
+    aside {
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+    #close {
+        background-color:#cd2122;
+        background-image:url('../images/close2.png');
+    }
+    #triangle {
+        display:none;
+    }
+    #right-column {
+        width:100%;
+        left:0;
+        position:relative;
+        top:auto;
+    }
+    .slider-custom-nav {
+        padding-bottom:20px;
+    }
+    h1 {
+	font-size: 50px;
+    }
+    h2 {
+	font-size: 36px;
+    }
+    h3 {
+	font-size:30px;
+    }
+    h4, summary {
+	font-size:26px;
+    }
+    h5 {
+	font-size:22px;
+	margin-bottom:10px !important;
+    }
+    h6 {
+	font-size:18px;
+	margin-bottom:10px !important;
+    }
+}
+@media only screen and (max-width:480px) {
+    .vegas-background {
+        display:none !important;
+    }
+}
+@media only screen and (max-height:380px) {
+    .vegas-background {
+        display:none !important;
+    }
+}

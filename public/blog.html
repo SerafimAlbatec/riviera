@@ -1,0 +1,128 @@
+<div id="page-box" class="wrapper animated fadeInDownBig">
+    <div class="wrap">
+        <div class="grids">
+            <div class="grid-12">
+                <h1>Latest Posts</h1>
+                <hr/>
+            </div>
+            <!-- POST -->
+            <div class="grid-3 post">
+                <img class="post-link" src="images/photos/post1.jpg" alt="" />
+            </div>
+            <div class="grid-9 post">
+                <h3>
+                    <a class="singlepost-link" href="blogpost">Post Title</a>
+                    <span class="postdate">April 9, 2013</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <a class="singlepost-link" href="blogpost">read more...</a>
+                </p>
+            </div>
+            <!-- POST -->
+            <div class="grid-3 post">
+                <img class="post-link" src="images/photos/post2.jpg" alt="" />
+            </div>
+            <div class="grid-9 post">
+                <h3>
+                    <a class="singlepost-link" href="blogpost">Post Title</a>
+                    <span class="postdate">April 7, 2013</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <a class="singlepost-link" href="blogpost">read more...</a>
+                </p>
+            </div>
+            <!-- POST -->
+            <div class="grid-3 post">
+                <img class="post-link" src="images/photos/post3.jpg" alt="" />
+            </div>
+            <div class="grid-9 post">
+                <h3>
+                    <a class="singlepost-link" href="blogpost">Post Title</a>
+                    <span class="postdate">April 5, 2013</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <a class="singlepost-link" href="blogpost">read more...</a>
+                </p>
+            </div>
+            <!-- POST -->
+            <div class="grid-3 post">
+                <img class="post-link" src="images/photos/post4.jpg" alt="" />
+            </div>
+            <div class="grid-9 post">
+                <h3>
+                    <a class="singlepost-link" href="blogpost">Post Title</a>
+                    <span class="postdate">April 3, 2013</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <a class="singlepost-link" href="blogpost">read more...</a>
+                </p>
+            </div>
+            <!-- POST -->
+            <div class="grid-3 post">
+                <img class="post-link" src="images/photos/post5.jpg" alt="" />
+            </div>
+            <div class="grid-9 post">
+                <h3>
+                    <a class="singlepost-link" href="blogpost">Post Title</a>
+                    <span class="postdate">April 1, 2013</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <a class="singlepost-link" href="blogpost">read more...</a>
+                </p>
+            </div>
+            <!-- PAGINATION -->
+            <div class="grid-12">
+                <!-- Pagination -->
+                <ul class="pagination">
+                    <li class="arrow unavailable">
+                        <a href="">&laquo;</a>
+                    </li>
+                    <li class="current">
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li>
+                        <a href="">3</a>
+                    </li>
+                    <li>
+                        <a href="">4</a>
+                    </li>
+                    <li>
+                        <a href="">5</a>
+                    </li>
+                    <li>
+                        <a href="">6</a>
+                    </li>
+                    <li>
+                        <a href="">7</a>
+                    </li>
+                    <li class="unavailable">
+                        <a href="">&hellip;</a>
+                    </li>
+                    <li>
+                        <a href="">18</a>
+                    </li>
+                    <li>
+                        <a href="">19</a>
+                    </li>
+                    <li class="arrow">
+                        <a href="">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS FILES -->
+<script src="js/pageload.js" type="text/javascript"></script>
+<!-- AJAX CLICK EVENT -->
+<script type="text/javascript">
+    $("#page-box").find(".singlepost-link").click(function(event) {
+        var $clickedElement = $(event.target);
+        var currentId = $clickedElement.attr('href');
+        $("#page-box").html("").load(currentId + '.html');
+        return false;
+    });
+</script>

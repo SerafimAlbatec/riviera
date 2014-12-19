@@ -1,0 +1,222 @@
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#loading').fadeOut(2000);
+    //$('#loading').hide(); 
+  });
+</script>
+
+
+<div id="loading"></div>
+
+<div id="page-box" class="wrapper animated fadeInDownBig">
+    <div class="wrap">
+        <div class="grids">
+            <!-- PAGE TITLE -->
+            <div class="grid-12">
+                <h1>Contact</h1>
+                <hr/>
+            </div>
+            <!-- GOOGLE MAP -->
+            <div class="grid-12">
+                <div class="flex-video widescreen"></div>
+            </div>
+            <!-- INFO SECTION -->
+            <div class="grid-12">
+                <h2>Make a Reservation</h2>
+            </div>
+            <!-- reservation form -->
+            <form  role="form" id="contactForm" class="epikoinonia_form">
+                <div class="grid-4">
+                    <label>Name</label>
+                    <input type="text" name="senderName" id="senderName" maxlength="40" required="required" />
+                    <label>E-Mail</label>
+                    <input type="email" name="senderEmail" id="senderEmail" required="required" maxlength="50" />
+                    <label>Cell Number</label>
+                    <input type="text" name="senderPhone" id="senderPhone" maxlength="40" />
+                    <label>Date</label>
+                    <input type="date" name="senderDate" id="senderDate" maxlength="50" />
+                </div>
+                <div class="grid-4">
+                    <label>No of People</label>
+                    <input type="text" name="senderNumber" id="senderNumber" maxlength="10" />
+                    <label>Message</label>
+                    <textarea name="message" id="message"></textarea>
+                    <input id="sendMessage" name="sendMessage" class="button" value="Send" />
+                </div> 
+                <div class="grid-4">
+                    <div class="contact-info">
+                        <p>Address: Lorem str. 34/8 New York</p>
+                        <p>Phone: 555-555-5555</p>
+                        <p>E-mail: info@mysite.com</p>
+                        <!-- SOCIAL ICONS -->
+                        <ul class="icons">
+                            <li>
+                                <a href="https://www.facebook.com/riviera.beachbar.5" target="_blank">
+                                    <%=image_tag("social-media/facebook-60.png", class: "icon")%>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    
+                                    <%=image_tag("social-media/twitter-60.png", class: "icon")%>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    
+                                    <%=image_tag("social-media/google-60.png", class: "icon")%>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   
+                                    <%=image_tag("social-media/vimeo-60.png", class: "icon")%>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    
+                                    <%=image_tag("social-media/youtube-60.png", class: "icon")%>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- JS FILES -->
+<script src="/assets/pageload.js"></script>
+<!-- GOOGLE MAP CODE -->
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $("#page-box").find(".flex-video").html('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%CE%91%CE%B3%CE%B3%CE%B5%CE%BB%CE%BF%CF%87%CF%89%CF%81%CE%B9%20riviera%20beach%20bar&key=AIzaSyDsRtOUyG0dksUMUu70-MVdfklxku92Frk"></iframe>');
+        }, 1200);
+    });
+</script>
+
+<script>
+
+/*
+  $(".epikoinonia_form").bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                senderName: {
+                    message: 'Το πεδίο όνομα είναι απαραίτητο',
+                    validators: {
+                        notEmpty: {
+                            message: 'Το πεδίο όνομα είναι απαραίτητο'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: 'Το πεδίο όνομα πρέπει να εχεί τουλάχιστον 1 χαρακτήρες'
+                        }//,
+                        //regexp: {
+                        //    regexp: /^[a-zA-Z0-9_]+$/,
+                        //    message: 'The username can only consist of alphabetical, number and underscore'
+                        //}
+                    }
+                },
+                senderEmail: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Το πεδίο email είναι απαραίτητο'
+                        },
+                        emailAddress: {
+                            message: 'Η διεύθυνση δεν είναι έγκυρη '
+                        }
+                    }
+                },
+                senderPhone: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Το πεδίο αριθμός είναι απαραίτητο'
+                        },
+                        integer: {
+                          message: 'The value is not an integer'
+                        }
+                    }
+                },
+                senderDate: {
+                    validators: {
+                        date: {
+                          format: 'DD/MM/YYYY',
+                          message: 'The value is not a valid date'
+                        }
+                    }
+                },
+                senderNumber: {
+                    validators: {
+                        integer: {
+                          message: 'The value is not an integer'
+                        }
+                    }
+                },
+                message: {
+                    message: 'Το πεδίο μήνυμα είναι απαραίτητο',
+                    validators: {
+                        notEmpty: {
+                            message: 'Το πεδίο μήνυμα είναι απαραίτητο'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'Το πεδίο μήνυμα πρέπει να εχεί τουλάχιστον 6 χαρακτήρες'
+                        }
+                    }
+                }
+            }
+        });
+*/   /*
+        $('.epikoinonia_form').validate({
+            debug: true,
+            rules: {
+                senderName: "required", // should be: "user[username]"
+                senderEmail: { // should be: "user[email]"
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                senderName: "Please specify your name", // should be: "user[username]"
+                senderEmail: { // should be: "user[email]"
+                    required: "We need your email address to contact you",
+                    email: "Your email address must be in the format of name@domain.com"
+                }
+            }
+        });
+*/
+
+        $( "#sendMessage" ).click(function() {
+            var email = $('#senderEmail').val();
+            var koimeno = $('#message').val();
+            var onoma = $('#senderName').val();
+            var arithmos = $('#senderNumber').val();
+            var noumero = $('#senderPhone').val();
+            var mera = $('#senderDate').val();
+
+                $.ajax({
+              type:'get',
+              url:'/riviera/send_mail',
+              dataType: "json",
+              data: { email: email, koimeno: koimeno, onoma: onoma, arithmos: arithmos, noumero: noumero, mera: mera },
+              success: function(data) { 
+                },
+              error: function(data) { 
+                }
+            });//end ajax
+              location.reload();
+            });
+
+
+
+</script>
