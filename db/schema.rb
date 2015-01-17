@@ -11,12 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218194609) do
+ActiveRecord::Schema.define(version: 20150117170116) do
 
-  create_table "eventpages", force: true do |t|
-    t.string   "title"
-    t.string   "image"
+  create_table "events", force: true do |t|
+    t.text     "title"
+    t.string   "date"
     t.text     "text"
+    t.string   "img1"
+    t.string   "img2"
+    t.string   "img3"
+    t.string   "img4"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "menus", force: true do |t|
+    t.string   "name"
+    t.string   "text"
+    t.float    "price",      limit: 24
+    t.string   "img1"
+    t.string   "img2"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

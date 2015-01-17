@@ -1,0 +1,77 @@
+<!-- Main Menu-->
+    <header class="cf">
+        <div class="logo"><a href="/"></a></div>
+
+        <div class="menu-drop">
+            <a>Menu</a>
+            <ul class="ul-drop">
+                <li>
+                    <a href="/">Home</a>
+                    <!--
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a>Drop Down 2</a></li>
+                        <li><a>Drop Down 3</a></li>
+                        <li><a>Drop Down 4</a></li>
+                    </ul>
+                -->
+                </li>
+                <li>
+                    <a href=<%= menu_index_path %> >Menu</a>
+                </li>
+                <li>
+                    <a href=<%= events_index_path %> >Events</a>
+                </li>
+                <li>
+                    <a href=<%= story_index_path %> >Story</a>
+                </li>
+                <li>
+                    <a href=<%= gallery_index_path %> >Gallery</a>
+                </li>
+                <li>
+                    <a href=<%= contact_index_path %> >Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="center-align">
+
+            <!-- left side menu -->
+            <ul class="col-6 left">
+                <li>
+                    <a href=<%= events_index_path %> >Events</a>
+                </li>
+                <li>
+                    <a href=<%= menu_index_path %> >Menu</a>
+                </li>
+                <li>
+                    <a href="/">Home</a>
+                    <!--
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li class="line"></li>
+                        <li><a>Drop Down 2</a></li>
+                        <li class="line"></li>
+                        <li><a>Drop Down 3</a></li>
+                        <li class="line"></li>
+                        <li><a>Drop Down 4</a></li>
+                    -->
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- right side menu -->
+            <ul class="col-6 right">
+                <li>
+                    <a href=<%= story_index_path %> >Story</a>
+                </li>
+                <li>
+                    <a href=<%= gallery_index_path %> >Gallery</a>
+                </li>
+                <li>
+                    <a href=<%= contact_index_path %> >Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>

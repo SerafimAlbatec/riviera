@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'riviera#home' 
- get 'riviera/about'
- get 'riviera/blog'
- get 'riviera/event'
- get 'riviera/eventpage'
- get 'riviera/menu'
- get 'riviera/gallery'
- get 'riviera/video'
- get 'riviera/contact'
- get 'riviera/send_mail'
+ root 'home#index'
+ get 'menu/index'
+ get 'events/index'
+ get 'story/index'
+ get 'gallery/index'
+ get 'contact/index'
+ get 'contact/send_mail'
+ get 'events/event'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

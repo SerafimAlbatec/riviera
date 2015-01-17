@@ -2,50 +2,30 @@
 <html>
 <head>
   <title>Riviera</title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="keywords" content="spookynet.org, webdesignlab.org " /> 
-  <!--CSS FILES -->
-  <%= stylesheet_link_tag "normalize", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "animate", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "style", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "media", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "grid", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "gallery", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "jquery.bxslider", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "audioplayer", media: 'all', 'data-turbolinks-track' => true  %>
-  <%= stylesheet_link_tag "colorbox", media: 'all', 'data-turbolinks-track' => true  %>
-  <!--
-  <%= stylesheet_link_tag "slicolorboxder", media: 'all', 'data-turbolinks-track' => true  %>
-        <link href="css/normalize.css" rel="stylesheet" type="text/css" />
-        <link href="css/animate.css" rel="stylesheet" type="text/css" />
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/media.css" rel="stylesheet" type="text/css" />
-        <link href="css/grid.css" rel="stylesheet" type="text/css" />
-        <link href="css/gallery.css" rel="stylesheet" type="text/css" />
-        <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
-        <link href="css/audioplayer.css" rel="stylesheet" type="text/css"/>
-        <link href="css/colorbox.css" rel="stylesheet" type="text/css" />
-      -->
-      <!-- JS FILES -->
-        <script src="/assets/jquery.js"></script>
-        <script src="/assets/jquery.vegas.js"></script>
-        <script src="/assets/audioplayer.js"></script>
-        <script src="/assets/jquery.fitvids.js"></script>
-        <script src="/assets/jquery.bxslider.min.js"></script>
-        <script src="/assets/jquery.simpleWeather.min.js"></script>
-    
-
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Styles 
+  <link rel="stylesheet" href="css/general.css">
+  -->
+  <%= stylesheet_link_tag 'general'%>
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+  <!-- Modernizr 
+  <script type='text/javascript' src='js/libs/modernizr-2.5.3.min.js'></script>
+   -->
+     <%= javascript_include_tag 'modernizr-2.5.3.min'%>
 </head>
 <body>
 
+<%= render "layouts/header" %>
 <%= yield %>
-
 
 </body>
 </html>

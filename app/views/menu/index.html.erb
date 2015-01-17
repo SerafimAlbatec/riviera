@@ -1,0 +1,86 @@
+<!-- ## Header Back -->
+    <div class="header-back" style="background-image: url('/assets/backgrounds/header_menu.jpg');">
+        <div class="triang top"></div>
+        <div class="triang bot"></div>
+    </div>
+
+    <!-- Our Menu -->
+    <article class="our-menu">
+        <h2 class="caption">Our menu</h2>
+        <div class="center-align">
+            <div class="line-cake">
+                <div class="cake"></div>
+                <div class="line left"></div>
+                <div class="line right"></div>
+            </div>
+        </div>
+
+        <div class="center-align content cf">
+
+            <div class="filter-line cf">
+                
+            </div>
+
+            <div class="gallery cf">
+
+                <% @menu.each do |c| %>
+                      <div class="col-3">
+                        <div class="background">
+                            <h2><%= c.name %></h2>
+                            <div class="text">
+                                <p>
+                                    <%= c.text %>
+                                </p>
+                            </div>
+                            <div class="line"></div>
+                            <div class="info">
+                                <h3>just <%= c.price %>€</h3>
+                                <a href="menu-open.html">Description</a>
+                            </div>
+                            
+                            <a href="menu-open.html">
+                                <div class="hover"></div>
+                                
+                                <img src="/assets/our-menu/<%= c.img1 %>" alt=""/>
+                            
+                            </a>
+                        
+                            <!--
+                            <div style="background-image: url('/assets/our-menu/icon1.png');" class="circle"></div>
+                            -->
+                        </div>
+                    </div>
+
+                <% end %>
+                
+
+        </div>
+    </article>
+
+    <!-- ## Footer -->
+    <section class="footer footer-small">
+        <div class="center-align">
+
+            <p class="copy">Copyright, All Right Reserved</p>
+
+        </div>
+
+        <!-- ## ## ## ## ## ## ## ## ## ## -->
+        <div class="inner-border"></div>
+        <div class="background-opacity"></div>
+    </section>
+
+    <!-- Libs 
+    <script src="js/libs/jquery-1.10.2.min.js"></script>
+    -->
+    <script src="/assets/jquery-1.10.2.min.js"></script>
+    
+    <!-- Custom 
+    <script src="js/scripts.js"></script>
+    -->
+    <script src="/assets/scripts.js"></script>
+
+    <!-- Init -->
+    <script type="text/javascript">
+        InitDefault();
+    </script>

@@ -1,0 +1,74 @@
+<!-- ## Header Back -->
+    <div class="header-back" style="background-image: url('/assets/backgrounds/header3.jpg');">
+        <div class="triang top"></div>
+        <div class="triang bot"></div>
+    </div>
+
+    <!-- Our Gallery -->
+    <article class="events-time-line">
+        <h2 class="caption">Our events</h2>
+        <div class="center-align">
+            <div class="line-cake">
+                <div class="cake"></div>
+                <div class="line left"></div>
+                <div class="line right"></div>
+            </div>
+        </div>
+
+        <div class="center-align content">
+            <div class="back-line"></div>
+            <div class="cub-top"></div>
+            <div class="cub-bot"></div>
+
+            <% @event.each do |c| %>
+
+              <div class="item cf">
+
+                <div class="text">
+                    <h2 class="caption"><%= c.title %></h2>
+                    <p>
+                        <%= c.text %>
+                    </p>
+                    <div class="info">
+                        <h3><%= c.date %> / <a href=<%= events_event_path(:diaskedasi => c.id) %>>Open the Event</a></h3>
+                    </div>
+                </div>
+                <div class="circle">
+                    <div class="circ"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="img">
+                    <img src="/assets/our-events/<%= c.img1 %>" alt=""/>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+                  
+            <% end %>
+
+            <!-- ## ## ## ## ## ## ## ## ## -->
+
+    </article>
+
+    <!-- ## Footer -->
+    <section class="footer footer-small">
+        <div class="center-align">
+
+            <p class="copy">Copyright, All Right Reserved</p>
+
+        </div>
+
+        <!-- ## ## ## ## ## ## ## ## ## ## -->
+        <div class="inner-border"></div>
+        <div class="background-opacity"></div>
+    </section>
+
+    <!-- Libs -->
+    <script src="/assets/jquery-1.10.2.min.js"></script>
+    
+    <!-- Custom -->
+    <script src="/assets/scripts.js"></script>
+
+    <!-- Init -->
+    <script type="text/javascript">
+        InitDefault();
+    </script>

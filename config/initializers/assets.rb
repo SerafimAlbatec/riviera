@@ -2,16 +2,8 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( normalize.css )
-Rails.application.config.assets.precompile += %w( animate.css )
-Rails.application.config.assets.precompile += %w( media.css )
-Rails.application.config.assets.precompile += %w( style.css )
-Rails.application.config.assets.precompile += %w( grid.css )
-Rails.application.config.assets.precompile += %w( gallery.css )
-Rails.application.config.assets.precompile += %w( jquery.bxslider.css )
-Rails.application.config.assets.precompile += %w( audioplayer.css )
-Rails.application.config.assets.precompile += %w( colorbox.css )
-
+Rails.application.config.assets.precompile += %w( general.css )
+Rails.application.config.assets.precompile += %w( modernizr-2.5.3.min.js )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.

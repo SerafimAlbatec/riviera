@@ -1,0 +1,129 @@
+<!-- Our Team -->
+    <article class="contact-us">
+        <h2 class="caption">Contact us</h2>
+        <div class="center-align">
+            <div class="line-cake">
+                <div class="cake"></div>
+                <div class="line left"></div>
+                <div class="line right"></div>
+            </div>
+        </div>
+        <!-- ## ## ## ## ## ## ## ## ## ## ## -->
+        <div class="center-align content">
+
+            <div class="img">
+                <img src="/assets/contact/contact.jpg" alt=""/>
+                <div class="shadows"></div>
+            </div>
+
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt suscipit tellus nec consequat.
+                    Praesent rhoncus purus sed arcu volutpat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam tincidu nt suscipit tellus nec consequat.
+                    Praesent rhoncus purus sed arcu volutpat ornare.
+                </p>
+            </div>
+            
+        </div>
+    </article>
+
+    <!-- ## Home Footer -->
+    <section class="footer">
+        <div class="center-align">
+            <a href="#top" class="top"></a>
+
+            <h2 class="caption">Send me a Message</h2>
+
+            <form role="form" class="cf" id="contact-form">
+                <div class="col-4">
+                    <input name="name" type="text" placeholder="Your Name" id="senderName" maxlength="40" required="required"/>
+                    <input name="email" type="text" placeholder="Your e-mail address" id="senderEmail" required="required" maxlength="50"/>
+                    <textarea name="subject" placeholder="Subject" id="senderNumber"></textarea>
+                </div>
+
+                <div class="col-8">
+                    <textarea name="message"  placeholder="Type here your message...." id="message"></textarea>
+                    <input type="submit" value="Send" id="sendMessage"/>
+                </div>
+            </form>
+
+            <div class="contacts cf">
+                <div class="col-4">
+                    <ul>
+                        <li>
+                            <div class="icon-adress"></div>
+                            <p>
+                                Address // 1412 Cafeteria
+                                San Francisco, BC 2390
+                            </p>
+                        </li>
+                        <li>
+                            <div class="icon-phone"></div>
+                            <p>Telephone nr. // (620) 695-1236780</p>
+                        </li>
+                        <li>
+                            <div class="icon-mail"></div>
+                            <p>E-Mail // contact@cofeteria.com</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-8">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%CE%91%CE%B3%CE%B3%CE%B5%CE%BB%CE%BF%CF%87%CF%89%CF%81%CE%B9%20riviera%20beach%20bar&key=AIzaSyDsRtOUyG0dksUMUu70-MVdfklxku92Frk"></iframe>
+                </div>
+            </div>
+
+            <p class="copy">Copyright, All Right Reserved</p>
+
+        </div>
+
+        <!-- ## ## ## ## ## ## ## ## ## ## -->
+        <div class="inner-border"></div>
+        <div class="background-opacity"></div>
+    </section>
+
+    <!-- Libs -->
+    <script src="/assets/jquery-1.10.2.min.js"></script>
+    
+    <!-- Custom -->
+    <script src="/assets/scripts.js"></script>
+
+    <!-- Init -->
+    <script type="text/javascript">
+        InitDefault();
+    </script>
+
+    <script type="text/javascript">
+        $( "#sendMessage" ).click(function() {
+            var email = $('#senderEmail').val();
+            var koimeno = $('#message').val();
+            var onoma = $('#senderName').val();
+            var arithmos = $('#senderNumber').val();
+            //var noumero = $('#senderPhone').val();
+            //var mera = $('#senderDate').val();
+        if (email.trim() && koimeno.trim() && onoma.trim() && arithmos.trim() ) {
+             // is empty or whitespace
+        
+            $.ajax({
+              type:'get',
+              url:'/contact/send_mail',
+              dataType: "json",
+              data: { email: email, koimeno: koimeno, onoma: onoma, arithmos: arithmos },
+              success: function(data) { 
+                },
+              error: function(data) { 
+                }
+            });//end ajax
+            alert("Το μύνημα εστάλει!!!");
+            //setTimeout(function() {
+              location.reload();
+            //}, 3000);
+        
+        }
+        else{
+          alert("Κάτι πήγε στραβά!!!");
+        }
+
+            });
+    </script>

@@ -1,0 +1,138 @@
+<!-- Story Open -->
+    <div class="story-open">
+        <div class="center-align cf">
+
+            <div class="col-8 main">
+
+                <h2 class="caption"><%= @event.title %></h2>
+                <h3 class="info"><%= @event.date %> / Author - Admin / Category - Events</h3>
+
+                <div class="story-slider">
+                    <div class="outlines"></div>
+                    <div class="shadow"></div>
+
+                    <ul class="slides">
+                        <li> <img src="/assets/our-story-open/<%= @event.img1 %>" alt=""/> </li>
+                        <!--<li> <img src="/assets/our-story-open/1.jpg" alt=""/> </li>
+                        <li> <img src="/assets/our-story-open/1.jpg" alt=""/> </li>-->
+                    </ul>
+                </div>
+
+                <div class="text">
+                    <p>
+                        <%= @event.text %>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt suscipit tellus nec consequat.
+                        Praesent rhoncus purus sed arcu volutpat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam tincidunt suscipit tellus nec consequat. Praesent rhoncus purus sed arcu volutpat ornare.
+                    </p>
+                </div>
+
+                <blockquote class="cf" style="margin-bottom:100px;">
+                    <div class="outlines"></div>
+                    <span>“</span>
+                    <p>
+                        <%= @event.outline %>
+                    </p>
+                </blockquote>
+
+                <%= social_share_button_tag(:url => "events_event_path(:diaskedasi => @event.id)", :image => "http://getbootstrap.com/assets/img/devices.png" ) %>
+
+
+            </div>
+
+            <div class="col-4 right">
+                <div class="content">
+
+                    <div class="caption">
+                        <h3>About us</h3>
+                        <div class="line-cake">
+                            <div class="cake"></div>
+                            <div class="line lleft"></div>
+                            <div class="line lright"></div>
+                        </div>
+                    </div>
+
+                    <div class="about">
+                        <img src="/assets/our-story-open/about.jpg" alt=""/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Aliquam tincidunt suscipit tellus nec consequat.
+                            Praesent rhoncus purus sed arcu volutpat ornare.
+                            Lorem ipsum dolor sit amet, consectetur.
+                        </p>
+                    </div>
+
+                    <div class="caption">
+                        <h3>Most commented</h3>
+                        <div class="line-cake">
+                            <div class="cake"></div>
+                            <div class="line lleft"></div>
+                            <div class="line lright"></div>
+                        </div>
+                    </div>
+
+                    <div class="most-commented">
+                        <div class="comment">
+                            <img src="/assets/our-story-open/commented1.jpg" alt=""/>
+                            <h2 class="cap"><a href="#">Title for your news blog</a></h2>
+                            <p class="date">12 september 2013</p>
+                        </div>
+                        <div class="comment">
+                            <img src="/assets/our-story-open/commented2.jpg" alt=""/>
+                            <h2 class="cap"><a href="#">If you are going</a></h2>
+                            <p class="date">12 september 2013</p>
+                        </div>
+                        <div class="comment">
+                            <img src="/assets/our-story-open/commented3.jpg" alt=""/>
+                            <h2 class="cap"><a href="#">The generated lorem ipsum</a></h2>
+                            <p class="date">12 september 2013</p>
+                        </div>
+                    </div>
+
+                    <div class="caption">
+                        
+                        <div class="line-cake">
+                            <div class="cake"></div>
+                            <div class="line lleft"></div>
+                            <div class="line lright"></div>
+                        </div>
+                    </div>
+
+                    <div class="tags">
+                        <a href="#">
+                            
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ## Footer -->
+    <section class="footer footer-small">
+        <div class="center-align">
+
+            <p class="copy">Copyright, All Right Reserved</p>
+
+        </div>
+
+        <!-- ## ## ## ## ## ## ## ## ## ## -->
+        <div class="inner-border"></div>
+        <div class="background-opacity"></div>
+    </section>
+
+    <!-- Libs -->
+    <script src="/assets/jquery-1.10.2.min.js"></script>
+    <script src="/assets/jquery.flexslider-min.js"></script>
+    
+    <!-- Custom -->
+    <script src="/assets/scripts.js"></script>
+
+    <!-- Init -->
+    <script type="text/javascript">
+        InitDefault();
+        InitStoryOpen();
+    </script>
