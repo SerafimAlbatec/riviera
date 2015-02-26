@@ -133,7 +133,7 @@ function InitDefault(){
         if ($window.scrollTop() > offset - window.innerHeight )
         {
             var yPos = -(($window.scrollTop()) / 5 );
-            var coords = '50% ' + ( yPos ) + 'px';
+            var coords = '80% ' + ( yPos ) + 'px';
             $obj.css({ backgroundPosition:  coords });
         }
     });

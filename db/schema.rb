@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117170116) do
+ActiveRecord::Schema.define(version: 20150118135849) do
 
   create_table "events", force: true do |t|
     t.text     "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150117170116) do
     t.string   "img4"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "outline"
   end
 
   create_table "menus", force: true do |t|
@@ -31,6 +32,15 @@ ActiveRecord::Schema.define(version: 20150117170116) do
     t.float    "price",      limit: 24
     t.string   "img1"
     t.string   "img2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stories", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.string   "date"
+    t.string   "img"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

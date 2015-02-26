@@ -9,6 +9,7 @@ Rails.application.routes.draw do
  get 'events/index'
  get 'story/index'
  get 'gallery/index'
+ get 'gallery/gallery'
  get 'contact/index'
  get 'contact/send_mail'
  get 'events/event'
