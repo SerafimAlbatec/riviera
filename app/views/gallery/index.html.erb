@@ -1,3 +1,9 @@
+<!-- ## Header Back -->
+    <div class="header-back" style="background-image: url('/assets/gallery/2.jpg');">
+        <div class="triang top"></div>
+        <div class="triang bot"></div>
+    </div>
+
 <!-- Our Gallery -->
     <article class="our-gallery">
         <h2 class="caption">Our gallery</h2>
@@ -22,221 +28,31 @@
 
             <div class="gallery cf">
 
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/backgrounds/header3.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
+                <% @gallery.each do |c| %>
 
-                <!-- -->
-                <div class="col-3">
+                  <div class="col-3">
                     <div class="background">
-                        <a href="gallery-open.html">
+                        <a href=<%= gallery_gallery_path(:album => c.id) %>>
                             <div class="hover"></div>
-                            <img src="/assets/our-gallery/2.jpg" alt=""/>
+                            <img src="/assets/our-gallery/<%= c.image %>" alt=""/>
                         </a>
                         <div class="shadow"></div>
                         <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
+                        <a class="look" href=<%= gallery_gallery_path(:album => c.id) %>>content</a>
                     </div>
                 </div>
+                      
+                <% end %>
 
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/3.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/4.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/5.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/6.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/7.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/8.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/9.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/10.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/11.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/12.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/13.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/14.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/15.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
-
-                <!-- -->
-                <div class="col-3">
-                    <div class="background">
-                        <a href="gallery-open.html">
-                            <div class="hover"></div>
-                            <img src="/assets/our-gallery/16.jpg" alt=""/>
-                        </a>
-                        <div class="shadow"></div>
-                        <div class="pic"></div>
-                        <a class="look" href="gallery-open.html">Take a look</a>
-                    </div>
-                </div>
+                
             </div>
-
+        <!--
         <div class="pagination cf">
             <h3 class="left"><a href="#">Previous</a></h3>
             <h3 class="right"><a href="#">Next</a></h3>
             <h3 class="center">1 of 5</h3>
         </div>
-
+        -->
         </div>
     </article>
 

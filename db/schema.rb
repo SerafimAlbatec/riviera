@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118135849) do
+ActiveRecord::Schema.define(version: 20150226130511) do
+
+  create_table "albums", force: true do |t|
+    t.string   "image"
+    t.integer  "gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", force: true do |t|
     t.text     "title"
@@ -24,6 +31,13 @@ ActiveRecord::Schema.define(version: 20150118135849) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "outline"
+  end
+
+  create_table "galleries", force: true do |t|
+    t.string   "image"
+    t.text     "koimeno"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "menus", force: true do |t|
